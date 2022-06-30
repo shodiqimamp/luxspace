@@ -1,18 +1,20 @@
 import React from "react";
 
 import Header from "../parts/Header";
-import Breadcrumb from "../components/Breakcrumb/index";
-// import ProductDetail from '../parts/details/ProductDetail';
-// import Suggestions from '../parts/details/Suggestions';
+import Breadcrumb from "../components/Breadcrumb";
+
+import ShoppingCart from "../parts/Cart/ShoppingCart";
+import ShippingDetails from "../parts/Cart/ShippingDetails";
+
 import Sitemap from "../parts/Sitemap";
 import Footer from "../parts/Footer";
-import ShoppingCart from "../parts/carts/ShoppingCart";
-import ShippingDetail from "../parts/carts/ShippingDetail";
+
+import Document from "../parts/Document";
 
 export default function Cart() {
   return (
-    <>
-      <Header theme={"black"} />
+    <Document>
+      <Header theme="black" />
 
       <Breadcrumb
         list={[
@@ -24,15 +26,14 @@ export default function Cart() {
       <section className="md:py-16">
         <div className="container mx-auto px-4">
           <div className="flex -mx-4 flex-wrap">
-             <ShoppingCart />
-             <ShippingDetail/>
+            <ShoppingCart />
+            <ShippingDetails />
           </div>
         </div>
       </section>
-      {/* <ProductDetail/>
-        <Suggestions/> */}
+
       <Sitemap />
       <Footer />
-    </>
+    </Document>
   );
 }

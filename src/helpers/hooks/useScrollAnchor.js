@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 
-export default function UseScrollAnchor() {
+export default function useScrollAnchor() {
   useLayoutEffect(() => {
     const smoothScrollAnchor = document.querySelectorAll("a[href^='#']");
 

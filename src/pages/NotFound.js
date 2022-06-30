@@ -1,20 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Header from "../parts/Header";
+import PageErrorMessage from "../parts/PageErrorMessage";
+
 import Sitemap from "../parts/Sitemap";
 import Footer from "../parts/Footer";
-import PageError from "../parts/PageError";
+
+import Document from "../parts/Document";
 
 export default function NotFound() {
   return (
-    <>
-      <Header theme={"black"} />
+    <Document>
+      <Header theme="black" />
 
-      <PageError />
+      <PageErrorMessage />
+
       <Sitemap />
       <Footer />
-
-    </>
+    </Document>
   );
 }

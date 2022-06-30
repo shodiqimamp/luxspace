@@ -1,19 +1,19 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
 import Header from "../parts/Header";
-import Breadcrumb from "../components/Breakcrumb/index";
-// import ProductDetail from '../parts/details/ProductDetail';
-// import Suggestions from '../parts/details/Suggestions';
+import Breadcrumb from "../components/Breadcrumb";
+
 import Sitemap from "../parts/Sitemap";
 import Footer from "../parts/Footer";
-import ShoppingCart from "../parts/carts/ShoppingCart";
-import ShippingDetail from "../parts/carts/ShippingDetail";
+
+import Document from "../parts/Document";
 
 export default function Congratulation() {
   return (
-    <>
-      <Header theme={"black"} />
+    <Document>
+      <Header theme="black" />
 
       <Breadcrumb
         list={[
@@ -21,7 +21,6 @@ export default function Congratulation() {
           { url: "/congratulation", name: "Success Checkout" },
         ]}
       />
-
       <section className="">
         <div className="container mx-auto min-h-screen">
           <div className="flex flex-col items-center justify-center">
@@ -30,12 +29,15 @@ export default function Congratulation() {
                 src="/images/content/illustration-success.png"
                 alt="congrats illustration"
               />
-              <h2 className="text-3xl font-semibold mb-6">Ah yes it’s success!</h2>
+              <h2 className="text-3xl font-semibold mb-6">
+                Ah yes it’s success!
+              </h2>
               <p className="text-lg mb-12">
                 Furniture yang anda beli akan kami kirimkan saat ini juga so now
                 please sit tight and be ready for it
               </p>
-              <Link to={"/"}
+              <Link
+                to="/"
                 className="text-gray-900 bg-red-200 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-8 cursor-pointer"
               >
                 Back to Shop
@@ -47,7 +49,6 @@ export default function Congratulation() {
 
       <Sitemap />
       <Footer />
-
-    </>
+    </Document>
   );
 }
